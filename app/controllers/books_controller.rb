@@ -3,7 +3,6 @@ class BooksController < ApplicationController
   def index
   	@books = Book.all # 記事を全件取得
   	@book = Book.new
-
   end
 
   def show
@@ -15,13 +14,12 @@ class BooksController < ApplicationController
   #end
 
   def create
-  	book = Book.new(book_params)
-  	if book.save
-        redirect_to book_path(book.id), notice : "successfully"
-    else
-    	render :new
-    end
-
+  	@book = Book.new(book_params)
+  		if @book.save
+		redirect_to book_path
+    	else
+    	render action: :@books
+    	end
   end
 
   def edit
@@ -30,8 +28,11 @@ class BooksController < ApplicationController
 
   def update
     book = Book.find(params[:id])
-    book.update(book_params)
+    if book.update(book_params)
     redirect_to book_path(book)
+	else
+		render action: :edit
+	end
   end
 
   def destroy
