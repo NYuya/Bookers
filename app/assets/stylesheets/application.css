@@ -70,6 +70,21 @@ p, ol, ul, td {
 }
 
 
+
+
+
+
+
+div.field, div.actions {
+    margin-bottom: 10px;
+}
+
+
+div {
+    display: block;
+}
+
+
 #error_explanation {
     width: 450px;
     border: 2px solid red;
@@ -77,11 +92,10 @@ p, ol, ul, td {
     padding-bottom: 0;
     margin-bottom: 20px;
     background-color: #f0f0f0;
+
+
 }
 
-div {
-    display: block;
-}
 
 #error_explanation h2 {
     text-align: left;
@@ -101,12 +115,6 @@ div {
 li {
     display: list-item;
     text-align: -webkit-match-parent;
-}
-
-.field_with_errors {
-    padding: 2px;
-    background-color: red;
-    display: table;
 }
 
 
