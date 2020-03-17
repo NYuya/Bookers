@@ -81,6 +81,13 @@ div {
     display: block;
 }
 
+input {
+    display: block;
+}
+textarea {
+    display: block;
+}
+
 
 #error_explanation {
     width: 450px;
@@ -112,6 +119,12 @@ div {
 li {
     display: list-item;
     text-align: -webkit-match-parent;
+}
+
+.field_with_errors{
+    padding: 2px;
+    background-color: red;
+    display: table;
 }
 
 
